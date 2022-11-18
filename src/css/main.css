@@ -33,14 +33,13 @@ margin-bottom: 20px;
 }
 
 .actions{
-    display: flex;
-    justify-content: center;
+    display: block;
     margin: 0 auto ;
 
 }
 .actions button{
     display: block;
-    margin-bottom: 15px;
+    margin:0px auto 15px auto;
     height: 44px;
     
 }
