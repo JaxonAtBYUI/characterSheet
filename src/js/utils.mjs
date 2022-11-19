@@ -36,12 +36,12 @@ export function renderwithTemplate(parent_node, template, data, callback) {
  * Loads the header and footer onto a page
  */
 export async function loadHeaderFooter() {
-  const footer = await loadTemplate("../partials/");
-  const header = await loadTemplate("../partials/");
+    const header = await loadTemplate("../partials/header.html");
+    const footer = await loadTemplate("../partials/footer.html");
 
-  const head = document.querySelector("header");
-  const foot = document.querySelector("footer");
+    const head = document.querySelector("header");
+    const foot = document.querySelector("footer");
 
-  renderwithTemplate(head, header);
-  renderwithTemplate(foot, footer);
+    renderwithTemplate(head, header);
+    renderwithTemplate(foot, footer);
 }
