@@ -9,7 +9,7 @@ header{
     font-size:smaller;
     border-bottom: 2px black solid;
     max-height:70px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 header h1{
     align-self: center;
@@ -21,15 +21,20 @@ header img{
 
 /* MAIN */
 .hero{
-border: 3px black solid;
-height: 200px;
 margin-bottom: 20px;
 }
 
+.hero img{
+    height: 100%;
+}
+
 .site-purpose{
-    border: 3px black solid;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding:.2rem;
+    border-radius: 3px 3px 3px 3px;
     height: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 7px;
 }
 
 .actions{
@@ -39,7 +44,7 @@ margin-bottom: 20px;
 }
 .actions button{
     display: block;
-    margin:0px auto 15px auto;
+    margin:0px auto 10px auto;
     height: 44px;
     
 }
