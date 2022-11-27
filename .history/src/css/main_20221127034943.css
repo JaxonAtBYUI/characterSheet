@@ -84,15 +84,15 @@ main {
 }
 /* Dash Board */
 .dashBoard{
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
 }
 .dashBoard h1{
     margin-left: 5%;
 }
 .addNewBtn{
-    box-sizing: border-box;
     margin: 24px auto;
+    
     width: 80%;
     border: 2px solid black;
     border-radius: 5px;
@@ -100,40 +100,17 @@ main {
     padding: 20px;
 }
 .addNewBtn h2{
-    
     margin: 0;
 }
 .chracterList{
-    width: 100%;
+
 }
 .chracter__item{
     border: 2px solid black;
-    
-    width: 80%;
-    margin: 10px auto;
+    margin: 10px;
 }
-.name h3{
-    margin: 0;
-    text-align: center;
-}
-.name {
-    border-bottom: 2px solid black;
-    padding: 10px
-}
-.character__info{
-    display: flex;
-    padding: 6px;
-    flex-wrap: wrap;
-}
-.character__info p{
-    margin: 6px;
-    font-size: 20px;
-    border-right: 1px solid black;
-    padding-right: 6px;
-}
-.character__info p:nth-last-child(){
-    border: none;
-}
+.
+
 
 
 /* FOOTER */
