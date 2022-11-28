@@ -13,6 +13,8 @@ body {
     background-color: #fcfcfc;
 }
 
+/* INDEX.HTML */
+
 /* Header */
 header{
     display: grid;
@@ -55,7 +57,7 @@ header img{
 }
 
 /* MAIN */
-main {
+.index-main {
     padding: 0 20px 0;
 }
 
@@ -91,6 +93,40 @@ footer{
     color: var(--colTextHeaderFooter);
     background-color: var(--colFooter);
 }
+
+/* SIGNUP.HTML */
+
+.sign-up-main h1{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    
+    
+}
+.sign-up-main div{
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up-form{
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em;
+    vertical-align: middle;
+    
+}
+.sign-up-form label{
+    display: block;
+    margin-bottom: 5%;
+    font-size: larger;
+
+}
+
+.sign-up-form input{
+    display: block;
+    margin: 10% auto;
+    
+}
+/* Sign-In.HTML */
 
 @media only screen and (min-width: 600px) {
 
