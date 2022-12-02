@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="./js/home.js" type="module"></script>
+    <title>Character Sheet | </title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <form id="characterSheet">    
+            <div id="characterSheet-basic">
+                <fieldset>
+                    <label>Name<input type="number" name="Name"></label>
+                    <label>Class<input type="text" name="Class"></label>
+                    <label>Level<input type="number" name="LVL"></label>
+                    <label>Experience<input type="number" name="EXP"></label>
+                    <label>Background<input type="text" name="Background"></label>
+                    <label>Alignment<input type="text" name="Alignment"></label>
+                    <label>Race<input type="text" name="Race"></label>
+                </fieldset>
+            </div>
+            <fieldset id="characterSheet-money">
+                <label>CP<input type="number" name="MoneyCP"></label>
+                <label>SP<input type="number" name="MoneySP"></label>
+                <label>EP<input type="number" name="MoneyEP"></label>
+                <label>GP<input type="number" name="MoneyGP"></label>
+                <label>PP<input type="number" name="MoneyPP"></label>
+            </fieldset>
+            <div id="characterSheet-combat">
+                <fieldset id="characterSheet-combat-group1">
+                    <label>AC<input type="number" name="AC"></label>
+                    <label>Speed<input type="number" name="Speed"></label>
+                    <label>Initiative<input type="number" name="Initiative"></label>
+                </fieldset>
+                <fieldset id="characterSheet-combat-hitPoints">
+                    <legend>Hit Points</legend>
+                    <label>Max Hit Points<input type="number" name="HPMax"></label>
+                    <label>Current Hit Points<input type="number" name="HPCurrent"></label>
+                    <label>Temporary Hit Points<input type="number" name="HPTemp"></label>
+                </fieldset>    
+                <label>Hit Die<input type="text" name="HitDice"></label>
+                <fieldset id="characterSheet-combat-saving">
+                    <legend>Death Saving Throws</legend>
+                    <p>Successes</p>
+                    <div class="horizontalFlex saveRadios">
+                        <label>1<input type="radio" name="DeathSavesSuccesses" value="1"></label>
+                        <label>2<input type="radio" name="DeathSavesSuccesses" value="2"></label>
+                        <label>3<input type="radio" name="DeathSavesSuccesses" value="3"></label>
+                    </div>
+                    <p>Failures</p>
+                    <div class="horizontalFlex saveRadios">
+                        <label>1<input type="radio" name="DeathSavesFailures" value="1"></label>
+                        <label>2<input type="radio" name="DeathSavesFailures" value="2"></label>
+                        <label>3<input type="radio" name="DeathSavesFailures" value="3"></label>
+                    </div>
+                </fieldset>
+                <!-- Put the attacks and spell casting here -->
+                <!-- Figure out how to do the inventory... Probably a JSON? -->
+            </div>
+            <div id="characterSheet-ability_scores">
+                <fieldset>
+                    <label>Inspiration<input type="text" name="Inspiration"></label>
+                    <label>Proficieny Bonus<input type="text" name="ProfBonus"></label>
+                    <label>Perception<input type="text" name="Perception"></label>
+                </fieldset>
+                <fieldset>
+                    <label>STR<input type="checkbox" name="STR"><span>VALUE</span></label>
+                    <label>DEX<input type="checkbox" name="DEX"><span>VALUE</span></label>
+                    <label>CON<input type="checkbox" name="CON"><span>VALUE</span></label>
+                    <label>INT<input type="checkbox" name="INT"><span>VALUE</span></label>
+                    <label>WIS<input type="checkbox" name="WIS"><span>VALUE</span></label>
+                    <label>CHR<input type="checkbox" name="CHR"><span>VALUE</span></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Saving Throws</legend>
+                    <label>STR<input type="checkbox" name="SavingSTR"><span>VALUE</span></label>
+                    <label>DEX<input type="checkbox" name="SavingDEX"><span>VALUE</span></label>
+                    <label>CON<input type="checkbox" name="SavingCON"><span>VALUE</span></label>
+                    <label>INT<input type="checkbox" name="SavingINT"><span>VALUE</span></label>
+                    <label>WIS<input type="checkbox" name="SavingWIS"><span>VALUE</span></label>
+                    <label>CHR<input type="checkbox" name="SavingCHR"><span>VALUE</span></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Skills</legend>
+                    <label>Acrobatics<input type="checkbox" name="Acrobatics"><span>VALUE</span></label>
+                    <label>Animal Handling<input type="checkbox" name="AnimalHandling"><span>VALUE</span></label>
+                    <label>Arcana<input type="checkbox" name="Arcana"><span>VALUE</span></label>
+                    <label>Athletics<input type="checkbox" name="Athletics"><span>VALUE</span></label>
+                    <label>Deception<input type="checkbox" name="Deception"><span>VALUE</span></label>
+                    <label>History<input type="checkbox" name="History"><span>VALUE</span></label>
+                    <label>Insight<input type="checkbox" name="Insight"><span>VALUE</span></label>
+                    <label>Intimidation<input type="checkbox" name="Intimidation"><span>VALUE</span></label>
+                    <label>Investigation<input type="checkbox" name="Investigation"><span>VALUE</span></label>
+                    <label>Medicine<input type="checkbox" name="Medicine"><span>VALUE</span></label>
+                    <label>Nature<input type="checkbox" name="Nature"><span>VALUE</span></label>
+                    <label>Perception<input type="checkbox" name="Perception"><span>VALUE</span></label>
+                    <label>Performance<input type="checkbox" name="Performance"><span>VALUE</span></label>
+                    <label>Persuasion<input type="checkbox" name="Persuasion"><span>VALUE</span></label>
+                    <label>Religion<input type="checkbox" name="Religion"><span>VALUE</span></label>
+                    <label>Sleight Of Hand<input type="checkbox" name="SleightOfHand"><span>VALUE</span></label>
+                    <label>Stealth<input type="checkbox" name="Stealth"><span>VALUE</span></label>
+                    <label>Survival<input type="checkbox" name="Survival"><span>VALUE</span></label>
+                </fieldset>
+            </div>
+            <div id="characterSheet-equipment"></div>
+            <div id="characterSheet-feats_and_traits">
+                <!-- JSON or just textarea is a debate to have -->
+                <label>Feats and Traits<textarea name="FeatsAndTraits"></textarea></label>
+            </div>
+            <div id="characterSheet-other_profs">
+                <!-- JSON or just textarea is a debate to have -->
+                <label>Other Proficiencies and Languages<textarea name="OtherProfsAndLanguages"></textarea></label>
+            </div>
+            <div id="characterSheet-background_simple">
+                <fieldset>
+                    <label>Personality Traits<textarea name="Personality"></textarea></label>
+                    <label>Ideals<textarea name="Ideals"></textarea></label>
+                    <label>Bonds<textarea name="Bonds"></textarea></label>
+                    <label>Flaws<textarea name="Flaws"></textarea></label>
+                </fieldset>
+            </div>
+            <div id="characterSheet-background_extended">
+                <!-- Low Priority Addition -->
+            </div>
+            <div id="characterSheet-spellcasting">
+                <!-- Low Priority Addition -->
+            </div>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>
