@@ -92,7 +92,6 @@ main {
 }
 #dashBoard h1{
     margin-left: 80px;
-    margin-bottom:0;
 }
 
 .dashBoard{
@@ -169,8 +168,6 @@ footer{
     }
     #dashBoard h1{
         margin-left: 40px;
-        
-        
     }
     
     .dashBoard{
@@ -247,7 +244,6 @@ footer{
     }
     #dashBoard h1{
         margin-left: 40px;
-        
     }
     
     .dashBoard{

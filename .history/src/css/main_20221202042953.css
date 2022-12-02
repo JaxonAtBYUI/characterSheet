@@ -83,71 +83,63 @@ main {
     
 }
 /* Dash Board */
-#dashBoard{
+/* .dashBoard{
+    width: 500px;
     margin: auto;
-    width: 400px;
-    /* border: 1px solid black; */
-    margin-bottom: 40px;
-    padding: 0;
+    margin-bottom: 30px;
 }
 #dashBoard h1{
-    margin-left: 80px;
-    margin-bottom:0;
-}
-
-.dashBoard{
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    /* padding: 20px; */
-    margin: 10px auto;
-}
-.dashBoard__items{
-    width: 400px;
-    /* display:flex;
-    flex-wrap: wrap; */
+    text-align: center;
 }
 .addNewBtn{
-    text-align:center;
-    background-color: rgb(175, 122, 113);
-}
-.addNewBtn:hover{
+    box-sizing: border-box;
+    margin: auto;
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(234, 184, 153);
     cursor: pointer;
-}
-.addNewBtn i {
-    display:none;
-    /* text-align: center; */
-    margin-top: 10px;
-    font-size: 80px;
+    margin-bottom: 20px;
 }
 .addNewBtn h2{
-    font-size: 20px;
+    /* cursor: default; 
+    margin: 0;
 }
-.addNewBtn, .character__item{
-    width: 200px;
-    border: 1px solid black;
-    margin: 10px auto;
-    overflow:hidden;
+.characterList{
+    width: 100%;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+.chracter__item{
     
+    width: 100%;
+    /* margin: 10px auto; 
 }
 .name h3{
+    font-size: 24px;
+    margin: 0;
     text-align: center;
-    margin: 10px;
 }
-.character__info span{
-    float: left;
-    font-size: 16px;
-    margin: 4px;
+.name {
+    border-bottom: 2px solid black;
+    padding: 10px
+}
+.character__info{
+    display: flex;
+    padding: 12px;
+    flex-wrap: wrap;
+}
+.character__info p{
+    margin: 8px;
+    font-size: 24px;
     border-right: 1px solid black;
-    padding: 4px;
+    padding-right: 10px;
 }
-.character__info span:last-child{
-    border-right: none;
-}
-
-.info{
-    display:none;
-}
+.character__info p:nth-last-child(){
+    border: none;
+} */
 
 
 /* FOOTER */
@@ -160,102 +152,41 @@ footer{
 }
 
 @media only screen and (min-width: 600px) {
-    #dashBoard{
-        margin: auto;
+    /* Dash Board */
+
+    /* .dashBoard{
         width: 600px;
-        /* border: 1px solid black; */
-        margin-bottom: 40px;
-        padding: 0;
-    }
-    #dashBoard h1{
-        margin-left: 40px;
-        
-        
-    }
-    
-    .dashBoard{
-        width: 90%;
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        margin: auto;
-    }
-    .dashBoard__items{
-        width: 500px;
+        /* overflow: hidden; 
+        margin: 0 0 30px 0;
         display:flex;
         flex-wrap: wrap;
     }
-    .addNewBtn{
-        text-align:center;
-        background-color: rgb(175, 122, 113);
+    #dashBoard h1{
+        text-align:left;
     }
-    .addNewBtn:hover{
-        cursor: pointer;
+    .dashBoard > div{
+        /* float:left; 
+        flex: 1;
+        min-width: 280px;
+        /* width: 380px; 
+        margin-right: 10px;
+        height: 200px;
     }
-    .addNewBtn i {
-        /* text-align: center; */
-        margin-top: 10px;
-        font-size: 80px;
-    }
-    .addNewBtn h2{
+    .character__info p{
         font-size: 20px;
-    }
-    .addNewBtn, .character__item{
-        width: 200px;
-        border: 1px solid black;
-        margin: 10px;
-    }
-    .name h3{
-        text-align: center;
-        margin: 10px;
-    }
-    .character__info span{
-        float: left;
-        font-size: 16px;
         margin: 4px;
-        border-right: 1px solid black;
-        padding: 4px;
-    }
-    .character__info span:last-child{
-        border-right: none;
-    }
-
-    .info{
-        display:none;
-    }
-    /* }
-    .info div{
-        width: 160px;
-        height: 140px;
-        border: 1px solid black;
-        margin: 10px;
-        border-radius: 10px;
-        text-align:center;
-        line-height: 140px;
-    }
-    .info div p{
-        margin:0;
     } */
 }
 @media only screen and (min-width: 800px){
     #dashBoard{
         margin: auto;
-        width: 740px;
-        /* border: 1px solid black; */
-        margin-bottom: 40px;
-        padding: 0;
+        width: 800px;
+        border: 1px solid black;
     }
-    #dashBoard h1{
-        margin-left: 40px;
-        
-    }
-    
     .dashBoard{
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 20px;
-        margin: auto;
     }
     .dashBoard__items{
         width: 500px;
@@ -264,7 +195,7 @@ footer{
     }
     .addNewBtn{
         text-align:center;
-        background-color: rgb(175, 122, 113);
+        background-color: w
     }
     .addNewBtn:hover{
         cursor: pointer;
@@ -272,16 +203,12 @@ footer{
     .addNewBtn i {
         /* text-align: center; */
         margin-top: 10px;
-        font-size: 80px;
-    }
-    .addNewBtn h2{
-        font-size: 20px;
+        font-size: 100px;
     }
     .addNewBtn, .character__item{
         width: 200px;
         border: 1px solid black;
         margin: 10px;
-        height: 140px;
     }
     .name h3{
         text-align: center;
@@ -299,21 +226,13 @@ footer{
     }
 
     .info{
-        display:block;
         width: 200px;
     }
     .info div{
-        width: 160px;
-        height: 140px;
-        border: 1px solid black;
-        margin: 10px;
-        border-radius: 10px;
-        text-align:center;
-        line-height: 140px;
+        width: 180px;
+        height: 180px;
     }
-    .info div p{
-        margin:0;
-    }
+
 }
 
 

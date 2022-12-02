@@ -85,25 +85,24 @@ main {
 /* Dash Board */
 #dashBoard{
     margin: auto;
-    width: 400px;
-    /* border: 1px solid black; */
+    width: 600px;
+    border: 1px solid black;
     margin-bottom: 40px;
     padding: 0;
 }
 #dashBoard h1{
-    margin-left: 80px;
-    margin-bottom:0;
+    margin-left: 40px;
 }
 
 .dashBoard{
     width: 90%;
     display: flex;
     justify-content: space-between;
-    /* padding: 20px; */
-    margin: 10px auto;
+    padding: 20px;
+    margin: auto;
 }
 .dashBoard__items{
-    width: 400px;
+    width: 500px;
     /* display:flex;
     flex-wrap: wrap; */
 }
@@ -115,7 +114,6 @@ main {
     cursor: pointer;
 }
 .addNewBtn i {
-    display:none;
     /* text-align: center; */
     margin-top: 10px;
     font-size: 80px;
@@ -126,9 +124,7 @@ main {
 .addNewBtn, .character__item{
     width: 200px;
     border: 1px solid black;
-    margin: 10px auto;
-    overflow:hidden;
-    
+    margin: 10px;
 }
 .name h3{
     text-align: center;
@@ -163,14 +159,12 @@ footer{
     #dashBoard{
         margin: auto;
         width: 600px;
-        /* border: 1px solid black; */
+        border: 1px solid black;
         margin-bottom: 40px;
         padding: 0;
     }
     #dashBoard h1{
         margin-left: 40px;
-        
-        
     }
     
     .dashBoard{
@@ -241,13 +235,12 @@ footer{
     #dashBoard{
         margin: auto;
         width: 740px;
-        /* border: 1px solid black; */
+        border: 1px solid black;
         margin-bottom: 40px;
         padding: 0;
     }
     #dashBoard h1{
         margin-left: 40px;
-        
     }
     
     .dashBoard{
@@ -281,7 +274,6 @@ footer{
         width: 200px;
         border: 1px solid black;
         margin: 10px;
-        height: 140px;
     }
     .name h3{
         text-align: center;
@@ -299,7 +291,6 @@ footer{
     }
 
     .info{
-        display:block;
         width: 200px;
     }
     .info div{
