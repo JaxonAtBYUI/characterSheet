@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
+/* The breakpoint for CSS will be 400 px. Under 400 px will be considered a phone, any wider and it will use pc css. */
+/* Generally speaking we should use relative measurements such as em, vh, and vw. */
+
+:root {
+    --colHeader: #dc2926;
+    --colTextHeaderFooter: #f5f5f5;
+    --colFooter: #444444;
+}
+
+body {
+    margin: 0;
+    background-color: #fcfcfc;
+}
+
+/* Header */
+header{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 100%;
+    font-family: 'Cinzel', serif;
+    background-color: var(--colHeader);
+    width: 100vw;
+    margin: auto;
+    min-height:10vh;
+    margin-bottom: 20px;
+    color: var(--colTextHeaderFooter);
+}
+header img {
+    display: block;
+    min-width: 15vw;
+}
+header nav ul {
+    justify-content: space-evenly;
+    display: flex;
+    list-style: none;
+    padding: 3vh;
+    position: fixed;
+    margin: 0;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: var(--colHeader);
+}
+header h1{
+    align-self: center;
+    padding-left: max(20px, 4vw);
+    font-size: 1em;
+    margin: 0;
+}
+header img{
+    max-width: 100%;
+    align-self: center;
+    padding: 10px;
+}
+
+/* MAIN */
+main {
+    padding: 0 20px 0;
+}
+
+.hero{
+    border: 3px black solid;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.site-purpose{
+    border: 3px black solid;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.actions{
+    display: block;
+    margin: 0 auto ;
+
+}
+.actions button{
+    display: block;
+    margin:0px auto 15px auto;
+    height: 44px;
+    
+}
+/* Dash Board */
+.dashBoard{
+    width: 500px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+#dashBoard h1{
+    text-align: center;
+}
+.addNewBtn{
+    box-sizing: border-box;
+    margin: auto;
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(234, 184, 153);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.addNewBtn h2{
+    /* cursor: default; */
+    margin: 0;
+}
+.characterList{
+    width: 100%;
+    border: 2px solid black;
+}
+.chracter__item{
+    
+    width: 100%;
+    /* margin: 10px auto; */
+}
+.name h3{
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+.name {
+    border-bottom: 2px solid black;
+    padding: 10px
+}
+.character__info{
+    display: flex;
+    padding: 12px;
+    flex-wrap: wrap;
+}
+.character__info p{
+    margin: 8px;
+    font-size: 24px;
+    border-right: 1px solid black;
+    padding-right: 10px;
+}
+.character__info p:nth-last-child(){
+    border: none;
+}
+
+
+/* FOOTER */
+footer{
+    margin: 0;
+    padding: 5vh 0 20vh 0;
+    text-align: center;
+    color: var(--colTextHeaderFooter);
+    background-color: var(--colFooter);
+}
+
+@media only screen and (min-width: 600px) {
+    /* Dash Board */
+    .dashBoard{
+        width: 600px;
+        /* overflow: hidden; */
+        margin: 0 0 30px 0;
+        display:flex;
+    }
+    #dashBoard h1{
+        text-align:left;
+    }
+    .dashBoard > div{
+        /* float:left; */
+        flex: 1;
+        min-width: 280px;
+        /* width: 380px; */
+        margin-right: 10px;
+        height: 200px;
+    }
+    .character__info p{
+        font-size: 20px;
+        margin: 4px;
+    }
+}
+
+
