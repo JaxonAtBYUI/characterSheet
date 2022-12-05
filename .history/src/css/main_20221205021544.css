@@ -440,7 +440,7 @@ font-family: 'Cinzel',
     #dashBoard{
         margin: auto;
         width: 600px;
-        /* border: 1px solid black; 
+        /* border: 1px solid black; */
         margin-bottom: 40px;
         padding: 0;
     }
@@ -471,7 +471,7 @@ font-family: 'Cinzel',
     }
     .addNewBtn i {
         display:block;
-        /* text-align: center; 
+        /* text-align: center; */
         margin-top: 10px;
         font-size: 80px;
     }
@@ -513,7 +513,7 @@ font-family: 'Cinzel',
     }
     .info div p{
         margin:0;
-    } 
+    } */
 } */
 @media only screen and (min-width: 800px){
     #dashBoard{

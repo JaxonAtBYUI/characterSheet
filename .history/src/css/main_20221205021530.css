@@ -369,7 +369,10 @@ font-family: 'Cinzel',
     .character__info span:last-child{
         border-right: none;
     }
-    /* dashboard  */
+
+}
+
+@media only screen and (min-width: 600px) {
     #dashBoard{
         margin: auto;
         width: 600px;
@@ -434,73 +437,6 @@ font-family: 'Cinzel',
     .info{
         display:none;
     }
-}
-
-/* @media only screen and (min-width: 600px) {
-    #dashBoard{
-        margin: auto;
-        width: 600px;
-        /* border: 1px solid black; 
-        margin-bottom: 40px;
-        padding: 0;
-    }
-    #dashBoard h1{
-        margin-left: 40px;
-        
-        
-    }
-    
-    .dashBoard{
-        width: 90%;
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        margin: auto;
-    }
-    .dashBoard__items{
-        width: 500px;
-        display:flex;
-        flex-wrap: wrap;
-    }
-    .addNewBtn{
-        text-align:center;
-        background-color: rgb(175, 122, 113);
-    }
-    .addNewBtn:hover{
-        cursor: pointer;
-    }
-    .addNewBtn i {
-        display:block;
-        /* text-align: center; 
-        margin-top: 10px;
-        font-size: 80px;
-    }
-    .addNewBtn h2{
-        font-size: 20px;
-    }
-    .addNewBtn, .character__item{
-        width: 200px;
-        border: 1px solid black;
-        margin: 10px;
-    }
-    .name h3{
-        text-align: center;
-        margin: 10px;
-    }
-    .character__info span{
-        float: left;
-        font-size: 16px;
-        margin: 4px;
-        border-right: 1px solid black;
-        padding: 4px;
-    }
-    .character__info span:last-child{
-        border-right: none;
-    }
-
-    .info{
-        display:none;
-    }
     /* }
     .info div{
         width: 160px;
@@ -513,8 +449,8 @@ font-family: 'Cinzel',
     }
     .info div p{
         margin:0;
-    } 
-} */
+    } */
+}
 @media only screen and (min-width: 800px){
     #dashBoard{
         margin: auto;
