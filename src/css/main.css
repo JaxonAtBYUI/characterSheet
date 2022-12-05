@@ -87,13 +87,25 @@ header img{
 
 /* FOOTER */
 footer{
+    
+    
     margin: 0;
     padding: 5vh 0 20vh 0;
     text-align: center;
     color: var(--colTextHeaderFooter);
     background-color: var(--colFooter);
 }
+ footer ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    
+    
+ }
 
+ footer a{
+    text-decoration: none;
+ }
 /* SIGNUP.HTML */
 
 .sign-up-main h1{
