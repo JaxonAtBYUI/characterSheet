@@ -53,10 +53,12 @@ header{
     margin-bottom: 20px;
     color: var(--colTextHeaderFooter);
 }
+
 header img {
     display: block;
     min-width: 15vw;
 }
+
 header nav ul {
     justify-content: space-evenly;
     display: flex;
@@ -69,6 +71,12 @@ header nav ul {
     left: 0px;
     background-color: var(--colHeader);
 }
+
+header nav ul a {
+    text-decoration: none;
+    color: white;
+}
+
 header h1{
     align-self: center;
     padding-left: max(20px, 4vw);

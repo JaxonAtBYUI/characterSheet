@@ -47,7 +47,6 @@ export default class Auth {
         }
       }
     });
-    this.hideLogin();
   }
   async signIn(creds) {
     const { data, error } = await supabase.auth.signInWithPassword({
@@ -66,15 +65,12 @@ export default class Auth {
       this.signIn(getCreds());
     });
   }
-  hideLogin() {
-    this.overlay.innerHTML = "";
-    this.overlay.classList.remove("show-overlay");
 
-    document.querySelector("#logout").addEventListener("click", (e) => {
-      e.preventDefault();
-      this.signOut();
-    });
+  hideLogin() {
+    this.overlay.innerHTML = loginFormTemplate();
+    this.overlay.classList.remove("show-overlay");
   }
+
   async checkAuth() {
     try {
       const { data: session, error } = await supabase.auth.getSession();
