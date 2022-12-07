@@ -181,11 +181,11 @@ header img{
 footer{
     
     
-    margin: 0;
+    /* margin: 0;
     padding: 5vh 0 20vh 0;
     text-align: center;
     color: var(--colTextHeaderFooter);
-    background-color: var(--colFooter);
+    background-color: var(--colFooter); */
 }
 
 
@@ -515,6 +515,37 @@ font-family: 'Cinzel',
         margin:0;
     } 
 } */
+
+.sign-up-main h1{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    
+    
+}
+.sign-up-main div{
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up-form{
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em;
+    vertical-align: middle;
+    
+}
+.sign-up-form label{
+    display: block;
+    margin-bottom: 5%;
+    font-size: larger;
+
+}
+
+.sign-up-form input{
+    display: block;
+    margin: 10% auto;
+    
+}
 @media only screen and (min-width: 800px){
     #dashBoard{
         margin: auto;
