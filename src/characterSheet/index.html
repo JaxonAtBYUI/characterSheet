@@ -5,57 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <script src="./js/home.js" type="module"></script>
+    <script src="../js/characterSheet.js" type="module"></script>
     <title>Character Sheet | </title>
 </head>
 <body>
     <header></header>
+    <div class="overlay"></div>
     <main>
         <form id="characterSheet">    
             <div id="characterSheet-basic">
                 <fieldset>
-                    <label>Name<input type="number" name="Name"></label>
-                    <label>Class<input type="text" name="Class"></label>
-                    <label>Level<input type="number" name="LVL"></label>
-                    <label>Experience<input type="number" name="EXP"></label>
-                    <label>Background<input type="text" name="Background"></label>
-                    <label>Alignment<input type="text" name="Alignment"></label>
-                    <label>Race<input type="text" name="Race"></label>
+                    <label>Name<input type="text" name="name"></label>
+                    <label>Class<input type="text" name="class"></label>
+                    <label>Level<input type="number" name="level"></label>
+                    <label>Experience<input type="number" name="experience"></label>
+                    <label>Background<input type="text" name="background"></label>
+                    <label>Alignment<input type="text" name="alignment"></label>
+                    <label>Race<input type="text" name="race"></label>
                 </fieldset>
             </div>
             <fieldset id="characterSheet-money">
-                <label>CP<input type="number" name="MoneyCP"></label>
-                <label>SP<input type="number" name="MoneySP"></label>
-                <label>EP<input type="number" name="MoneyEP"></label>
-                <label>GP<input type="number" name="MoneyGP"></label>
-                <label>PP<input type="number" name="MoneyPP"></label>
+                <label>CP<input type="number" name="cp"></label>
+                <label>SP<input type="number" name="sp"></label>
+                <label>EP<input type="number" name="ep"></label>
+                <label>GP<input type="number" name="gp"></label>
+                <label>PP<input type="number" name="pp"></label>
             </fieldset>
             <div id="characterSheet-combat">
                 <fieldset id="characterSheet-combat-group1">
-                    <label>AC<input type="number" name="AC"></label>
-                    <label>Speed<input type="number" name="Speed"></label>
-                    <label>Initiative<input type="number" name="Initiative"></label>
+                    <label>AC<input type="number" name="armor_class"></label>
+                    <label>Speed<input type="number" name="speed"></label>
+                    <label>Initiative<input type="number" name="initiative"></label>
                 </fieldset>
                 <fieldset id="characterSheet-combat-hitPoints">
                     <legend>Hit Points</legend>
-                    <label>Max Hit Points<input type="number" name="HPMax"></label>
-                    <label>Current Hit Points<input type="number" name="HPCurrent"></label>
-                    <label>Temporary Hit Points<input type="number" name="HPTemp"></label>
+                    <label>Max Hit Points<input type="number" name="max_hit_points"></label>
+                    <label>Current Hit Points<input type="number" name="current_hit_points"></label>
+                    <label>Temporary Hit Points<input type="number" name="temp_hit_points"></label>
                 </fieldset>    
-                <label>Hit Die<input type="text" name="HitDice"></label>
+                <label>Hit Die<input type="text" name="hit_dice"></label>
                 <fieldset id="characterSheet-combat-saving">
                     <legend>Death Saving Throws</legend>
                     <p>Successes</p>
                     <div class="horizontalFlex saveRadios">
-                        <label>1<input type="radio" name="DeathSavesSuccesses" value="1"></label>
-                        <label>2<input type="radio" name="DeathSavesSuccesses" value="2"></label>
-                        <label>3<input type="radio" name="DeathSavesSuccesses" value="3"></label>
+                        <label>1<input type="radio" name="death_saves_successes" value="1"></label>
+                        <label>2<input type="radio" name="death_saves_successes" value="2"></label>
+                        <label>3<input type="radio" name="death_saves_successes" value="3"></label>
                     </div>
                     <p>Failures</p>
                     <div class="horizontalFlex saveRadios">
-                        <label>1<input type="radio" name="DeathSavesFailures" value="1"></label>
-                        <label>2<input type="radio" name="DeathSavesFailures" value="2"></label>
-                        <label>3<input type="radio" name="DeathSavesFailures" value="3"></label>
+                        <label>1<input type="radio" name="death_saves_failures" value="1"></label>
+                        <label>2<input type="radio" name="death_saves_failures" value="2"></label>
+                        <label>3<input type="radio" name="death_saves_failures" value="3"></label>
                     </div>
                 </fieldset>
                 <!-- Put the attacks and spell casting here -->
@@ -63,72 +64,72 @@
             </div>
             <div id="characterSheet-ability_scores">
                 <fieldset>
-                    <label>Inspiration<input type="text" name="Inspiration"></label>
-                    <label>Proficieny Bonus<input type="text" name="ProfBonus"></label>
-                    <label>Perception<input type="text" name="Perception"></label>
+                    <label>Inspiration<input type="text" name="inspiration"></label>
+                    <label>Proficieny Bonus<input type="text" name="proficiency_bonus"></label>
+                    <label>Perception<input type="text" name="perception"></label>
                 </fieldset>
                 <fieldset>
-                    <label>STR<input type="checkbox" name="STR"><span>VALUE</span></label>
-                    <label>DEX<input type="checkbox" name="DEX"><span>VALUE</span></label>
-                    <label>CON<input type="checkbox" name="CON"><span>VALUE</span></label>
-                    <label>INT<input type="checkbox" name="INT"><span>VALUE</span></label>
-                    <label>WIS<input type="checkbox" name="WIS"><span>VALUE</span></label>
-                    <label>CHR<input type="checkbox" name="CHR"><span>VALUE</span></label>
+                    <label>STR<input type="checkbox" name="str"><span>VALUE</span></label>
+                    <label>DEX<input type="checkbox" name="dex"><span>VALUE</span></label>
+                    <label>CON<input type="checkbox" name="const"><span>VALUE</span></label>
+                    <label>INT<input type="checkbox" name="int"><span>VALUE</span></label>
+                    <label>WIS<input type="checkbox" name="wis"><span>VALUE</span></label>
+                    <label>CHR<input type="checkbox" name="char"><span>VALUE</span></label>
                 </fieldset>
                 <fieldset>
                     <legend>Saving Throws</legend>
-                    <label>STR<input type="checkbox" name="SavingSTR"><span>VALUE</span></label>
-                    <label>DEX<input type="checkbox" name="SavingDEX"><span>VALUE</span></label>
-                    <label>CON<input type="checkbox" name="SavingCON"><span>VALUE</span></label>
-                    <label>INT<input type="checkbox" name="SavingINT"><span>VALUE</span></label>
-                    <label>WIS<input type="checkbox" name="SavingWIS"><span>VALUE</span></label>
-                    <label>CHR<input type="checkbox" name="SavingCHR"><span>VALUE</span></label>
+                    <label>STR<input type="checkbox" name="saving_str"><span>VALUE</span></label>
+                    <label>DEX<input type="checkbox" name="saving_dex"><span>VALUE</span></label>
+                    <label>CON<input type="checkbox" name="saving_const"><span>VALUE</span></label>
+                    <label>INT<input type="checkbox" name="saving_int"><span>VALUE</span></label>
+                    <label>WIS<input type="checkbox" name="saving_wis"><span>VALUE</span></label>
+                    <label>CHR<input type="checkbox" name="saving_char"><span>VALUE</span></label>
                 </fieldset>
                 <fieldset>
                     <legend>Skills</legend>
-                    <label>Acrobatics<input type="checkbox" name="Acrobatics"><span>VALUE</span></label>
-                    <label>Animal Handling<input type="checkbox" name="AnimalHandling"><span>VALUE</span></label>
-                    <label>Arcana<input type="checkbox" name="Arcana"><span>VALUE</span></label>
-                    <label>Athletics<input type="checkbox" name="Athletics"><span>VALUE</span></label>
-                    <label>Deception<input type="checkbox" name="Deception"><span>VALUE</span></label>
-                    <label>History<input type="checkbox" name="History"><span>VALUE</span></label>
-                    <label>Insight<input type="checkbox" name="Insight"><span>VALUE</span></label>
-                    <label>Intimidation<input type="checkbox" name="Intimidation"><span>VALUE</span></label>
-                    <label>Investigation<input type="checkbox" name="Investigation"><span>VALUE</span></label>
-                    <label>Medicine<input type="checkbox" name="Medicine"><span>VALUE</span></label>
-                    <label>Nature<input type="checkbox" name="Nature"><span>VALUE</span></label>
-                    <label>Perception<input type="checkbox" name="Perception"><span>VALUE</span></label>
-                    <label>Performance<input type="checkbox" name="Performance"><span>VALUE</span></label>
-                    <label>Persuasion<input type="checkbox" name="Persuasion"><span>VALUE</span></label>
-                    <label>Religion<input type="checkbox" name="Religion"><span>VALUE</span></label>
-                    <label>Sleight Of Hand<input type="checkbox" name="SleightOfHand"><span>VALUE</span></label>
-                    <label>Stealth<input type="checkbox" name="Stealth"><span>VALUE</span></label>
-                    <label>Survival<input type="checkbox" name="Survival"><span>VALUE</span></label>
+                    <label>Acrobatics<input type="checkbox" name="acrobatics"><span>VALUE</span></label>
+                    <label>Animal Handling<input type="checkbox" name="animal_handling"><span>VALUE</span></label>
+                    <label>Arcana<input type="checkbox" name="arcana"><span>VALUE</span></label>
+                    <label>Athletics<input type="checkbox" name="athletics"><span>VALUE</span></label>
+                    <label>Deception<input type="checkbox" name="deception"><span>VALUE</span></label>
+                    <label>History<input type="checkbox" name="history"><span>VALUE</span></label>
+                    <label>Insight<input type="checkbox" name="insight"><span>VALUE</span></label>
+                    <label>Intimidation<input type="checkbox" name="intimidation"><span>VALUE</span></label>
+                    <label>Investigation<input type="checkbox" name="investigation"><span>VALUE</span></label>
+                    <label>Medicine<input type="checkbox" name="medicine"><span>VALUE</span></label>
+                    <label>Nature<input type="checkbox" name="nature"><span>VALUE</span></label>
+                    <label>Perception<input type="checkbox" name="perception"><span>VALUE</span></label>
+                    <label>Performance<input type="checkbox" name="performance"><span>VALUE</span></label>
+                    <label>Persuasion<input type="checkbox" name="persuasion"><span>VALUE</span></label>
+                    <label>Religion<input type="checkbox" name="religion"><span>VALUE</span></label>
+                    <label>Sleight Of Hand<input type="checkbox" name="sleight_of_hand"><span>VALUE</span></label>
+                    <label>Stealth<input type="checkbox" name="stealth"><span>VALUE</span></label>
+                    <label>Survival<input type="checkbox" name="survival"><span>VALUE</span></label>
                 </fieldset>
             </div>
             <div id="characterSheet-equipment"></div>
             <div id="characterSheet-feats_and_traits">
                 <!-- JSON or just textarea is a debate to have -->
-                <label>Feats and Traits<textarea name="FeatsAndTraits"></textarea></label>
+                <label>Feats and Traits<textarea name="feats_and_traits"></textarea></label>
             </div>
             <div id="characterSheet-other_profs">
                 <!-- JSON or just textarea is a debate to have -->
-                <label>Other Proficiencies and Languages<textarea name="OtherProfsAndLanguages"></textarea></label>
+                <label>Other Proficiencies and Languages<textarea name="other_proficiences"></textarea></label>
             </div>
-            <div id="characterSheet-background_simple">
+            <!-- <div id="characterSheet-background_simple">
                 <fieldset>
                     <label>Personality Traits<textarea name="Personality"></textarea></label>
-                    <label>Ideals<textarea name="Ideals"></textarea></label>
-                    <label>Bonds<textarea name="Bonds"></textarea></label>
-                    <label>Flaws<textarea name="Flaws"></textarea></label>
+                    <label>Ideals<textarea name="ideals"></textarea></label>
+                    <label>Bonds<textarea name="bonds"></textarea></label>
+                    <label>Flaws<textarea name="flaws"></textarea></label>
                 </fieldset>
             </div>
             <div id="characterSheet-background_extended">
-                <!-- Low Priority Addition -->
+                Low Priority Addition
             </div>
             <div id="characterSheet-spellcasting">
-                <!-- Low Priority Addition -->
-            </div>
+                Low Priority Addition
+            </div> -->
         </form>
     </main>
     <footer></footer>
