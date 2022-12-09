@@ -33,7 +33,7 @@ function renderDashboard(template, item){
   //       </div>
   //     </div>`;
   let copy = template.content.cloneNode(true);
-  copy.querySelector(".character__item").href += item.id;
+  copy.querySelector(".dashboard__item").href = 
   copy.querySelector(".name").innerHTML = item.name;
   copy.querySelector(".cls").innerHTML = item.class
   copy.querySelector(".lvl").innerHTML = item.level;

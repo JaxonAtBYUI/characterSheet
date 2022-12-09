@@ -448,7 +448,6 @@ font-family: 'Cinzel',
         border-radius: 4px;
         border: 1px solid #eee;
         text-decoration: none;
-        color: black;
     }
     .character__item:hover{
         cursor: pointer;
