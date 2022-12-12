@@ -10,7 +10,7 @@
 
 body {
     margin: 0;
-    background-color: #fcfcfc;
+    /* background-color: #fcfcfc; */
 }
 
 main {
@@ -50,7 +50,8 @@ header{
     width: 100vw;
     margin: auto;
     min-height:10vh;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    box-shadow: 15px 0 15px rgba(0, 0, 0, 0.9);
     color: var(--colTextHeaderFooter);
 }
 
@@ -77,6 +78,12 @@ header nav ul a {
     color: white;
 }
 
+header nav ul a:hover {
+    background-color: white;
+    opacity: .8;
+    color: black;
+}
+
 header h1{
     align-self: center;
     padding-left: max(20px, 4vw);
@@ -91,19 +98,32 @@ header img{
 
 /* MAIN */
 .index-main {
-    padding: 0 20px 0;
+    position: relative;
+    max-width: 95%;
+    margin: 0 auto;
+    font-family: 'Cinzel', serif;
 }
 
-.hero{
-    border: 3px black solid;
-    height: 200px;
-    margin-bottom: 20px;
+.index-main img{
+    max-width: 100%;
+    max-height: 60%;
+    
+    
 }
 
 .site-purpose{
-    border: 3px black solid;
-    height: 100px;
+    position: absolute;
     margin-bottom: 20px;
+    bottom: 20%;
+    right: 5%;
+    background-color: white;
+    opacity: .8;
+    font-size: larger;
+    font-family: 'Cinzel', serif;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+    border-radius: 10px 10px 10px 10px;
+    padding: 15px;
+
 }
 
 .actions{
@@ -115,7 +135,9 @@ header img{
     display: block;
     margin:0px auto 15px auto;
     height: 44px;
-    
+    font-family: 'Cinzel', serif;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.9);
+    border-radius: 10px 10px 10px 10px;
 }
 /* Dash Board */
 #dashBoard{
