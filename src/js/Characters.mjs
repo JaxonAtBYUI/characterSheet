@@ -57,9 +57,9 @@ export default class Characters {
         // Get their session
         this.getSession();
 
+        await this.classMenu();
         
         if (this.characterId > 0) {
-            await this.classMenu();
             this.characterData = await this.getOneCharacter();
             this.fillData();
             this.getModifiers();
