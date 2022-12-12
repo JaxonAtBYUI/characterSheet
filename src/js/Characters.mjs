@@ -48,6 +48,8 @@ export default class Characters {
         }
         
         getCharacterData();
+        this.getModifiers();
+        this.displayModifiers();
 
     }
     
@@ -156,7 +158,6 @@ export default class Characters {
             }
             else this.characterModifiers[modifier] = 0;
         })
-        console.log(this.characterModifiers);
     }
 
     /**
@@ -164,7 +165,28 @@ export default class Characters {
      */
     displayModifiers() {
         let stats = [...document.getElementsByClassName("stat")];
-        let saving = [...document.getElementsByClassName("")]
+        let savings = [...document.getElementsByClassName("saving_throw")]
+        let skills = [...document.getElementsByClassName("skill")]
+        
+        // Straight stats
+        stats.forEach( element => {
+            element.querySelector("span").innerHTML = this.characterModifiers[element.querySelector("input").name];
+        })
+
+        // Saving throws
+        savings.forEach( element => {
+            const proficient = element.querySelector("input").checked
+            let mod = this.characterModifiers[element.classList[1]]
+            if (proficient) mod += parseInt(document.getElementsByName("proficiency_bonus")[0].value);
+            element.querySelector("span").innerHTML = mod;
+        })
+
+        skills.forEach( element => {
+            const proficient = element.querySelector("input").checked
+            let mod = this.characterModifiers[element.classList[1]]
+            if (proficient) mod += parseInt(document.getElementsByName("proficiency_bonus")[0].value);
+            element.querySelector("span").innerHTML = mod;
+        })
     }
     
 

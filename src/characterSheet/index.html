@@ -66,9 +66,9 @@
             </div>
             <div id="characterSheet-ability_scores">
                 <fieldset>
-                    <label>Inspiration<input type="text" name="inspiration"></label>
-                    <label>Proficieny Bonus<input type="text" name="proficiency_bonus"></label>
-                    <label>Perception<input type="text" name="perception"></label>
+                    <label>Inspiration<input type="number" name="inspiration"></label>
+                    <label>Proficieny Bonus<input type="number" name="proficiency_bonus"></label>
+                    <label>Perception<input type="number" name="perception"></label>
                 </fieldset>
                 <fieldset>
                     <legend>Stats</legend>
@@ -81,33 +81,33 @@
                 </fieldset>
                 <fieldset>
                     <legend>Saving Throws</legend>
-                    <div class="saving_throw"><label>STR<input type="checkbox" name="saving_str"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="saving_throw"><label>DEX<input type="checkbox" name="saving_dex"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="saving_throw"><label>CON<input type="checkbox" name="saving_const"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="saving_throw"><label>INT<input type="checkbox" name="saving_int"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="saving_throw"><label>WIS<input type="checkbox" name="saving_wis"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="saving_throw"><label>CHR<input type="checkbox" name="saving_char"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="saving_throw str"><label>STR<input type="checkbox" name="saving_str"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="saving_throw dex"><label>DEX<input type="checkbox" name="saving_dex"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="saving_throw const"><label>CON<input type="checkbox" name="saving_const"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="saving_throw int"><label>INT<input type="checkbox" name="saving_int"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="saving_throw wis"><label>WIS<input type="checkbox" name="saving_wis"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="saving_throw char"><label>CHR<input type="checkbox" name="saving_char"></label><p>Ability Modifier: <span></span></p></div>
                 </fieldset>
                 <fieldset>
                     <legend>Skills</legend>
-                    <div class="skill"><label>Acrobatics<input type="checkbox" name="acrobatics"></label><p><p>Ability Modifier: <span></span></p></p></div>
-                    <div class="skill"><label>Animal Handling<input type="checkbox" name="animal_handling"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Arcana<input type="checkbox" name="arcana"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Athletics<input type="checkbox" name="athletics"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Deception<input type="checkbox" name="deception"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>History<input type="checkbox" name="history"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Insight<input type="checkbox" name="insight"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Intimidation<input type="checkbox" name="intimidation"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Investigation<input type="checkbox" name="investigation"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Medicine<input type="checkbox" name="medicine"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Nature<input type="checkbox" name="nature"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Perception<input type="checkbox" name="perception"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Performance<input type="checkbox" name="performance"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Persuasion<input type="checkbox" name="persuasion"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Religion<input type="checkbox" name="religion"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Sleight Of Hand<input type="checkbox" name="sleight_of_hand"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Stealth<input type="checkbox" name="stealth"></label><p>Ability Modifier: <span></span></p></div>
-                    <div class="skill"><label>Survival<input type="checkbox" name="survival"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill dex"><label>Acrobatics<input type="checkbox" name="acrobatics"></label><p><p>Ability Modifier: <span></span></p></p></div>
+                    <div class="skill wis"><label>Animal Handling<input type="checkbox" name="animal_handling"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill int"><label>Arcana<input type="checkbox" name="arcana"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill str"><label>Athletics<input type="checkbox" name="athletics"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill char"><label>Deception<input type="checkbox" name="deception"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill int"><label>History<input type="checkbox" name="history"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill wis"><label>Insight<input type="checkbox" name="insight"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill char"><label>Intimidation<input type="checkbox" name="intimidation"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill int"><label>Investigation<input type="checkbox" name="investigation"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill wis"><label>Medicine<input type="checkbox" name="medicine"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill int"><label>Nature<input type="checkbox" name="nature"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill wis"><label>Perception<input type="checkbox" name="perception"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill char"><label>Performance<input type="checkbox" name="performance"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill char"><label>Persuasion<input type="checkbox" name="persuasion"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill int"><label>Religion<input type="checkbox" name="religion"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill dex"><label>Sleight Of Hand<input type="checkbox" name="sleight_of_hand"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill dex"><label>Stealth<input type="checkbox" name="stealth"></label><p>Ability Modifier: <span></span></p></div>
+                    <div class="skill wis"><label>Survival<input type="checkbox" name="survival"></label><p>Ability Modifier: <span></span></p></div>
                 </fieldset>
             </div>
             <div id="characterSheet-equipment"></div>
