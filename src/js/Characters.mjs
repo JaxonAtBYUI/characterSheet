@@ -1,11 +1,32 @@
 import supabase from "./SupaSetup.mjs";
 import { getParam } from "./utils.mjs"
 
+const TOP_URL = 'https://www.dnd5eapi.co/api'
 
 function getCharacterData() {
     const form = document.getElementById('characterSheet');
     const formData = new FormData(form);
-    const json =  {...Object.fromEntries(formData)}
+    const json =  {...Object.fromEntries(formData)};
+    
+    // Checkboxes
+    const checks = ["saving_str", "saving_dex", "saving_const", "saving_int", "saving_wis", "saving_char", "acrobatics", "animal_handling", "arcana", "athletics", "deception", "history", "insight", "intimidation", "investigation", "medicine", "nature", "perception", "performance", "persuasion", "religion", "sleight_of_hand", "stealth", "survival" ]
+
+    for (const name of checks) {
+        const element = document.getElementsByName(name)[0];
+        json[name] = (element.checked == true);
+    }
+
+    // Numbers
+    const numbers = ["level", "experience", "cp", "sp", "ep", "gp", "pp", "armor_class", "speed", "initiative", "max_hit_points", "current_hit_points", "temp_hit_points", "inspiration", "proficiency_bonus", "perception", "str", "dex", "const", "int", "wis", "char"]
+
+    for (const name of numbers) {
+        const element = document.getElementsByName(name)[0];
+        if (!element?.value || element?.value == "") json[name] = 0;
+        else json[name] = parseInt(element.value);
+        // json[name] = (element.checked == true);
+    }
+    
+
     return json
 }
 
@@ -16,8 +37,7 @@ function fillDataByName(value, name) {
 
 export default class Characters {
     
-    constructor (id) {
-        this.insert = false;
+    constructor () {
         this.characterId = getParam("id")
         
         this.characterModifiers = {
@@ -39,17 +59,16 @@ export default class Characters {
 
         
         if (this.characterId > 0) {
+            await this.classMenu();
             this.characterData = await this.getOneCharacter();
             this.fillData();
             this.getModifiers();
+            this.displayModifiers();
         }
         else {
-            this.insert = true;
+            document.getElementById("deleteCharacter").style.display = "none";
         }
         
-        getCharacterData();
-        this.getModifiers();
-        this.displayModifiers();
 
     }
     
@@ -77,15 +96,17 @@ export default class Characters {
      * Insert the character data is that is currently being edited into the table.
      */
     async insertCharacter() {
-        characterData = getCharacterData();
-
-        const { data, error } = await supabase
-            .from('characters')
-            .insert([
-                characterData,
-            ]);
-
-        location.href = `../characterSheet/index.html?id=${this.id}`;
+        try {
+            const characterData = getCharacterData();
+            const { data, error } = await supabase
+                .from('characters')
+                .insert([
+                    characterData,
+                ]);
+        } catch (error) {
+            console.log(`This is the error: ${error}`);
+        }
+        location.href = `../dashboard`;
     }
 
 
@@ -93,23 +114,25 @@ export default class Characters {
      * Update the character that is currently being viewed.
      */
     async updateCharacter() {
-        characterData = getCharacterData();
-
+        const characterData = getCharacterData();
+        const characterId = getParam("id");
+        
         const { data, error } = await supabase
             .from('characters')
-            .update({ other_column: 'otherValue' })
-            .eq('id', this.id);
-
+            .update(characterData)
+            .eq('id', characterId)
     }
 
     /**
      * Delete the character you are currently viewing.
      */
     async deleteCharacter() {
+        const characterId = getParam("id");
+
         const { data, error } = await supabase
             .from('characters')
             .delete()
-            .eq('id', this.id)
+            .eq('id', characterId);
         
         location.href = './dashboard';
     }
@@ -189,5 +212,17 @@ export default class Characters {
         })
     }
     
+    /**
+     * Proof of concept dropdown menu
+     */
+    async classMenu() { // https://www.dnd5eapi.co/api/classes
+        const reqURL = TOP_URL + '/classes';
+        let classes = await fetch(reqURL).then(response => response.json());
+        classes = classes.results.map(DNDclass => DNDclass.name);
+        const classSelect = document.getElementsByName("class")[0];
+        classes.forEach( className => {
+            classSelect.innerHTML += `<option value="${className}">${className}</option>`
+        })
+    }
 
 }
