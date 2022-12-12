@@ -19,6 +19,16 @@ export default class Characters {
     constructor (id) {
         this.insert = false;
         this.characterId = getParam("id")
+        
+        this.characterModifiers = {
+            str: 0,
+            dex: 0,
+            const: 0,
+            int: 0,
+            wis: 0,
+            char: 0,
+        }
+
         this.init()
     }
 
@@ -31,13 +41,14 @@ export default class Characters {
         if (this.characterId > 0) {
             this.characterData = await this.getOneCharacter();
             this.fillData();
+            this.getModifiers();
         }
         else {
             this.insert = true;
         }
         
-        console.log("Form Data");
         getCharacterData();
+
     }
     
     async getSession() {
@@ -71,6 +82,8 @@ export default class Characters {
             .insert([
                 characterData,
             ]);
+
+        location.href = `../characterSheet/index.html?id=${this.id}`;
     }
 
 
@@ -95,17 +108,20 @@ export default class Characters {
             .from('characters')
             .delete()
             .eq('id', this.id)
+        
+        location.href = './dashboard';
     }
 
+    /**
+     * Fills in data for the character sheet with preexisting data.
+     */
     fillData() {
-        
         // Fill in the text data
         for (const [key, value] of Object.entries(this.characterData)) {
             var elements = document.getElementsByName(key);
             
             if (elements[0] != null) {
                 // Checkboxes
-                console.log(elements[0]);
                 if ((elements[0].getAttribute('type') === 'checkbox') && (value == true)) {
                     elements[0].checked = true;
                 }
@@ -122,8 +138,34 @@ export default class Characters {
                 }
             }
         }
-
-
     }
+
+    /**
+     * Calculate Modifiers
+     */
+    getModifiers() {
+        const possibleModifiers = [ -4, -4, -4, -4, -3, -3, -2, -2, -1, -1, 0, 0 , 1, 1, 2, 2, 3, 3, 4, 4, 5, 5 ]
+        let stats = [...document.getElementsByClassName("stat")];
+        stats.forEach( element => {
+            const modifier = element.querySelector("input").name;
+            if (element.querySelector("input").value != null) {
+                let value;
+                if (element.querySelector("input").value >21 || element.querySelector("input").value < 0) {value = 10;}
+                else {value = element.querySelector("input").value;}
+                this.characterModifiers[modifier] = possibleModifiers[value];
+            }
+            else this.characterModifiers[modifier] = 0;
+        })
+        console.log(this.characterModifiers);
+    }
+
+    /**
+     * Display the modifiers
+     */
+    displayModifiers() {
+        let stats = [...document.getElementsByClassName("stat")];
+        let saving = [...document.getElementsByClassName("")]
+    }
+    
 
 }

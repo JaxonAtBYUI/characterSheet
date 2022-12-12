@@ -8,8 +8,13 @@
     --colFooter: #444444;
 }
 
+html,
 body {
-    margin: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
     background-color: #fcfcfc;
 }
 
@@ -226,8 +231,6 @@ header img{
 
 /* FOOTER */
 footer{
-    
-    
     margin: 0;
     padding: 5vh 0 20vh 0;
     text-align: center;
@@ -239,6 +242,8 @@ footer{
 /* Character Sheet Form CSS */
 #characterSheet {
     color: black;
+    max-width: 95vw;
+    margin: auto;
 }
 
 #characterSheet label {
@@ -255,9 +260,11 @@ footer{
 #characterSheet label, #characterSheet input {
     display: block;
 }
+
 #characterSheet fieldset {
     margin-top: 10px;
 }
+
 #characterSheet legend {
 font-family: 'Cinzel',
     serif;
@@ -347,6 +354,16 @@ font-family: 'Cinzel',
     margin: 0 10px;
 }
 
+
+.stat,
+.saving_throw,
+.skill,
+.stat label,
+.saving_throw label,
+.skill label {
+    display: flex;
+    flex-direction: row;
+}
 
 .horizontalFlex {
     display: flex;
