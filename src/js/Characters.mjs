@@ -101,14 +101,24 @@ export default class Characters {
         
         // Fill in the text data
         for (const [key, value] of Object.entries(this.characterData)) {
-            var element = document.getElementsByName(key)[0];
-            if (element != null) {
-                if ((element.getAttribute('type') === 'checkbox') && (value == true)) {
-                    console.log("here")
-                    element.checked = true;
+            var elements = document.getElementsByName(key);
+            
+            if (elements[0] != null) {
+                // Checkboxes
+                console.log(elements[0]);
+                if ((elements[0].getAttribute('type') === 'checkbox') && (value == true)) {
+                    elements[0].checked = true;
                 }
+                
+                // Radios
+
+                else if (elements[0].getAttribute('type') === 'radio') {
+                    elements[value].checked = true;
+                }
+                
+                // Text and Number  
                 else{
-                    element.value = value;
+                    elements[0].value = value;
                 }
             }
         }
