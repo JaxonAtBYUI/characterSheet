@@ -1,21 +1,43 @@
 import supabase from "./SupaSetup.mjs";
+import { getParam } from "./utils.mjs"
 
 
 function getCharacterData() {
     const form = document.getElementById('characterSheet');
     const formData = new FormData(form);
     const json =  {...Object.fromEntries(formData)}
-    // console.log(formData)
+    return json
+}
+
+function fillDataByName(value, name) {
+    element = document.getElementsByName(name)[0];
+    element.value = value;
 }
 
 export default class Characters {
+    
     constructor (id) {
-        this.characterId = id
+        this.insert = false;
+        this.characterId = getParam("id")
         this.init()
     }
 
     async init() {
-        this.getSession()
+
+        // Get their session
+        this.getSession();
+
+        
+        if (this.characterId > 0) {
+            this.characterData = await this.getOneCharacter();
+            this.fillData();
+        }
+        else {
+            this.insert = true;
+        }
+        
+        console.log("Form Data");
+        getCharacterData();
     }
     
     async getSession() {
@@ -32,9 +54,9 @@ export default class Characters {
             .select("*")
 
             // Filters
-            .eq('id', this.id)
+            .eq('id', this.characterId)
         
-        console.log(characters);
+        return characters[0]
     }
 
 
@@ -73,6 +95,25 @@ export default class Characters {
             .from('characters')
             .delete()
             .eq('id', this.id)
+    }
+
+    fillData() {
+        
+        // Fill in the text data
+        for (const [key, value] of Object.entries(this.characterData)) {
+            var element = document.getElementsByName(key)[0];
+            if (element != null) {
+                if ((element.getAttribute('type') === 'checkbox') && (value == true)) {
+                    console.log("here")
+                    element.checked = true;
+                }
+                else{
+                    element.value = value;
+                }
+            }
+        }
+
+
     }
 
 }

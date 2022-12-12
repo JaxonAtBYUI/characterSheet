@@ -4,4 +4,3 @@ import Characters from "./Characters.mjs"
 loadHeaderFooter();
 
 const chara = new Characters();
-chara.getCharacterData();
