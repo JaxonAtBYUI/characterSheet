@@ -198,7 +198,6 @@ header img{
     border: 1px solid #eee;
     color:#ddd;
     border-radius: 4px;
-    text-decoration: none;
 }
 .character__item{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -402,7 +401,7 @@ font-family: 'Cinzel',
     .addNewBtn{
         text-align:center;
         background-color: rgb(175, 122, 113);
-        
+        text-decoration: none;
     }
     .addNewBtn:hover{
         cursor: pointer;
@@ -464,7 +463,6 @@ font-family: 'Cinzel',
     .addNewBtn{
         text-align:center;
         background-color: rgb(175, 122, 113);
-
     }
     .addNewBtn:hover{
         cursor: pointer;
